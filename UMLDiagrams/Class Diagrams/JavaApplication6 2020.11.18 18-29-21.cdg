@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="JavaApplication6">
+  <ClassDiagramComponents>
+    <Class name="Awal" package="danielczykjakub_projekt" visibility="public" xPosition="1000.0" yPosition="974.0">
+      <Fields>
+        <Field name="highscoreButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="infoButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="settingButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="startButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="tutorialButton" type="javax.swing.JButton" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="startButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="infoButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tutorialButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="highscoreButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="settingButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jLabel2KeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Car" package="danielczykjakub_projekt" visibility="public" xPosition="2047.0" yPosition="875.0">
+      <Fields>
+        <Field name="carImage" type="BufferedImage" visibility="private" isFinal="true"/>
+        <Field name="carXPosition" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="BufferedImage" name="image"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="moveLeft" returnType="void" visibility="public"/>
+        <Method name="moveRight" returnType="void" visibility="public"/>
+        <Method name="paintComponent" returnType="void" visibility="protected">
+          <Argument type="Graphics" name="g"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="GamePanel" package="danielczykjakub_projekt" visibility="public" xPosition="1820.0" yPosition="1220.0">
+      <Fields>
+        <Field name="car" type="Car" visibility="private"/>
+        <Field name="road" type="Road" visibility="private"/>
+        <Field name="policeCarsSpawnTimer" type="Timer" visibility="private"/>
+        <Field name="policeCarsSpeedIncreaseTimer" type="Timer" visibility="private"/>
+        <Field name="policeCarsList" type="ArrayList&lt;PoliceCar&gt;" visibility="private"/>
+        <Field name="policeCarSpawnDelay" type="int" visibility="private"/>
+        <Field name="policeCarSpeed" type="int" visibility="private"/>
+        <Field name="randomizer" type="Random" visibility="private"/>
+        <Field name="player" type="MediaPlayer" visibility="private"/>
+        <Field name="soundPlayer" type="AudioClip" visibility="private"/>
+        <Field name="explosionTimer" type="Timer" visibility="private"/>
+        <Field name="explostionTimerCounter" type="int" visibility="private"/>
+        <Field name="collisionCheckTimer" type="Timer" visibility="private"/>
+        <Field name="score" type="int" visibility="private"/>
+        <Field name="nyawa" type="int" visibility="private"/>
+        <Field name="intelligentPoliceCars" type="boolean" visibility="private"/>
+        <Field name="policeCarImage" type="BufferedImage" visibility="private"/>
+        <Field name="carImage" type="BufferedImage" visibility="private"/>
+        <Field name="treeImage" type="BufferedImage" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="preparePanel" returnType="void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="formKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="loadGame" returnType="void" visibility="private"/>
+        <Method name="restartGame" returnType="void" visibility="private"/>
+        <Method name="prepareTimers" returnType="void" visibility="private"/>
+        <Method name="preparePlayers" returnType="void" visibility="private"/>
+        <Method name="startGame" returnType="void" visibility="private"/>
+        <Method name="addNewPoliceCar" returnType="void" visibility="private"/>
+        <Method name="getCarCurrentRoadNumber" returnType="int" visibility="private"/>
+        <Method name="removeRedundantPoliceCars" returnType="void" visibility="private"/>
+        <Method name="collisionOccured" returnType="boolean" visibility="private"/>
+        <Method name="stopAllTimers" returnType="void" visibility="private"/>
+        <Method name="showAlert" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="High" package="danielczykjakub_projekt" visibility="public" xPosition="2596.0" yPosition="974.0">
+      <Fields>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Info" package="danielczykjakub_projekt" visibility="public" xPosition="198.0" yPosition="1620.0">
+      <Fields>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane3" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTextArea1" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="jTextArea2" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="jTextArea3" type="javax.swing.JTextArea" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MainWindow" package="danielczykjakub_projekt" visibility="public" xPosition="227.0" yPosition="1031.0">
+      <Fields>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PoliceCar" package="danielczykjakub_projekt" visibility="public" xPosition="476.0" yPosition="1353.0">
+      <Fields>
+        <Field name="policeCarImage" type="BufferedImage" visibility="private" isFinal="true"/>
+        <Field name="yPosition" type="int" visibility="private"/>
+        <Field name="timer" type="Timer" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="roadNumber"/>
+          <Argument type="int" name="velocityInMs"/>
+          <Argument type="BufferedImage" name="image"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setStartingPositionFromRoadNumber" returnType="void" visibility="private">
+          <Argument type="int" name="roadNumber"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public"/>
+        <Method name="stop" returnType="void" visibility="public"/>
+        <Method name="paintComponent" returnType="void" visibility="protected">
+          <Argument type="Graphics" name="g"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Road" package="danielczykjakub_projekt" visibility="public" xPosition="920.0" yPosition="1620.0">
+      <Fields>
+        <Field name="treeTimer" type="Timer" visibility="private"/>
+        <Field name="stripesList" type="ArrayList&lt;RoadStripe&gt;" visibility="private" isFinal="true"/>
+        <Field name="treesList" type="ArrayList&lt;Tree&gt;" visibility="private" isFinal="true"/>
+        <Field name="stripesTimer" type="Timer" visibility="private"/>
+        <Field name="gameStarted" type="boolean" visibility="private"/>
+        <Field name="explosionImage" type="BufferedImage" visibility="private"/>
+        <Field name="explosionImagePart" type="BufferedImage" visibility="private"/>
+        <Field name="explosionImageCounter" type="int" visibility="private"/>
+        <Field name="explosionPosition" type="Point" visibility="public"/>
+        <Field name="treeImage" type="BufferedImage" visibility="private"/>
+        <Field name="stripeSpeed" type="int" visibility="private"/>
+        <Field name="treeSpeed" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="prepareStripesTimer" returnType="void" visibility="private"/>
+        <Method name="prepareTreeTimer" returnType="void" visibility="private"/>
+        <Method name="startTimers" returnType="void" visibility="public"/>
+        <Method name="addFirstTrees" returnType="void" visibility="private"/>
+        <Method name="startTimersInStripesList" returnType="void" visibility="private"/>
+        <Method name="startTimersInTreesList" returnType="void" visibility="private"/>
+        <Method name="setTimersSpeed" returnType="void" visibility="public">
+          <Argument type="int" name="speed"/>
+        </Method>
+        <Method name="prepareSpawnSpeed" returnType="int" visibility="private">
+          <Argument type="int" name="speed"/>
+        </Method>
+        <Method name="prepareStripes" returnType="void" visibility="public"/>
+        <Method name="prepareTrees" returnType="void" visibility="public"/>
+        <Method name="addNewStripes" returnType="void" visibility="private">
+          <Argument type="int" name="speed"/>
+        </Method>
+        <Method name="addNewTrees" returnType="void" visibility="private">
+          <Argument type="int" name="speed"/>
+        </Method>
+        <Method name="removeRedundantStripes" returnType="void" visibility="private"/>
+        <Method name="removeRedundantTrees" returnType="void" visibility="private"/>
+        <Method name="nextExplosion" returnType="void" visibility="public"/>
+        <Method name="stopAllTimers" returnType="void" visibility="public"/>
+        <Method name="paintComponent" returnType="void" visibility="protected">
+          <Argument type="Graphics" name="g"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RoadStripe" package="danielczykjakub_projekt" visibility="public" xPosition="1296.0" yPosition="1681.0">
+      <Fields>
+        <Field name="yPosition" type="int" visibility="private"/>
+        <Field name="timer" type="Timer" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+          <Argument type="int" name="speed"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="startTimer" returnType="void" visibility="public"/>
+        <Method name="stop" returnType="void" visibility="public"/>
+        <Method name="setSpeed" returnType="void" visibility="public">
+          <Argument type="int" name="speed"/>
+        </Method>
+        <Method name="paintComponent" returnType="void" visibility="protected">
+          <Argument type="Graphics" name="g"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Setting" package="danielczykjakub_projekt" visibility="public" xPosition="227.0" yPosition="2057.0">
+      <Fields>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jToggleButton1" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="jToggleButton2" type="javax.swing.JToggleButton" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Tree" package="danielczykjakub_projekt" visibility="public" xPosition="1808.0" yPosition="2038.0">
+      <Fields>
+        <Field name="yPosition" type="int" visibility="private"/>
+        <Field name="timer" type="Timer" visibility="private" isFinal="true"/>
+        <Field name="treeImage" type="BufferedImage" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+          <Argument type="int" name="speed"/>
+          <Argument type="BufferedImage" name="image"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public"/>
+        <Method name="stop" returnType="void" visibility="public"/>
+        <Method name="setSpeed" returnType="void" visibility="public">
+          <Argument type="int" name="speed"/>
+        </Method>
+        <Method name="paintComponent" returnType="void" visibility="protected">
+          <Argument type="Graphics" name="g"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Tutorial" package="danielczykjakub_projekt" visibility="public" xPosition="2192.0" yPosition="2085.0">
+      <Fields>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jToggleButton1" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="jToggleButton2" type="javax.swing.JToggleButton" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="policeCarsList" source="danielczykjakub_projekt.GamePanel" target="danielczykjakub_projekt.PoliceCar" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;PoliceCar&gt;"/>
+    <HasRelation name="stripesList" source="danielczykjakub_projekt.Road" target="danielczykjakub_projekt.RoadStripe" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;RoadStripe&gt;"/>
+    <HasRelation name="treesList" source="danielczykjakub_projekt.Road" target="danielczykjakub_projekt.Tree" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Tree&gt;"/>
+    <HasRelation name="car" source="danielczykjakub_projekt.GamePanel" target="danielczykjakub_projekt.Car" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="road" source="danielczykjakub_projekt.GamePanel" target="danielczykjakub_projekt.Road" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

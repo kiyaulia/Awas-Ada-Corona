@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Java-Car-Game-master">
+  <ClassDiagramComponents>
+    <Class name="Awal" package="Corona" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="nama" type="String" visibility="public" isStatic="true"/>
+        <Field name="highscoreButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="infoButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="startButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="tutorialButton" type="javax.swing.JButton" visibility="private"/>
+        <Field name="username" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="startButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="infoButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tutorialButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="highscoreButtonActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="Efek" package="Corona" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Methods>
+        <Method name="collisionOccured" returnType="boolean" visibility="public"/>
+        <Method name="collisionOccuredVit" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="GamePanel" package="Corona" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="pemain" type="Pemain" visibility="private"/>
+        <Field name="road" type="Road" visibility="private"/>
+        <Field name="vitamin" type="Vitamin" visibility="private"/>
+        <Field name="virusSpawnTimer" type="Timer" visibility="private"/>
+        <Field name="virusSpeedIncreaseTimer" type="Timer" visibility="private"/>
+        <Field name="virusList" type="ArrayList&lt;Virus&gt;" visibility="private"/>
+        <Field name="virusSpawnDelay" type="int" visibility="private"/>
+        <Field name="virusSpeed" type="int" visibility="private"/>
+        <Field name="vitaminSpawnTimer" type="Timer" visibility="private"/>
+        <Field name="vitaminSpawnDelay" type="int" visibility="private"/>
+        <Field name="vitaminList" type="ArrayList&lt;Vitamin&gt;" visibility="private"/>
+        <Field name="randomizer" type="Random" visibility="private"/>
+        <Field name="player" type="MediaPlayer" visibility="package" isStatic="true"/>
+        <Field name="soundPlayer" type="AudioClip" visibility="package" isStatic="true"/>
+        <Field name="explosionTimer" type="Timer" visibility="private"/>
+        <Field name="explostionTimerCounter" type="int" visibility="private"/>
+        <Field name="collisionCheckTimer" type="Timer" visibility="private"/>
+        <Field name="score" type="double" visibility="private"/>
+        <Field name="imun" type="int" visibility="private"/>
+        <Field name="intelligent" type="boolean" visibility="private"/>
+        <Field name="virusImage" type="BufferedImage" visibility="private"/>
+        <Field name="pemainImage" type="BufferedImage" visibility="private"/>
+        <Field name="treeImage" type="BufferedImage" visibility="private"/>
+        <Field name="skor" type="JLabel" visibility="package"/>
+        <Field name="Nyawa_pemain" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="preparePanel" returnType="void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="formKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="loadGame" returnType="void" visibility="private"/>
+        <Method name="restartGame" returnType="void" visibility="private"/>
+        <Method name="prepareTimers" returnType="void" visibility="private"/>
+        <Method name="preparePlayers" returnType="void" visibility="private"/>
+        <Method name="startGame" returnType="void" visibility="private"/>
+        <Method name="addNewVirus" returnType="void" visibility="private"/>
+        <Method name="addNewVitamin" returnType="void" visibility="private"/>
+        <Method name="getCarCurrentRoadNumber" returnType="int" visibility="private"/>
+        <Method name="removeRedundantPoliceCars" returnType="void" visibility="private"/>
+        <Method name="removeRedundantVitamin" returnType="void" visibility="private"/>
+        <Method name="collisionOccuredVit" returnType="boolean" visibility="public"/>
+        <Method name="collisionOccured" returnType="boolean" visibility="public"/>
+        <Method name="stopAllTimers" returnType="void" visibility="private"/>
+        <Method name="showAlert" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="High" package="Corona" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="tampilskor" returnType="void" visibility="package"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Info" package="Corona" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane3" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTextArea1" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="jTextArea2" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="jTextArea3" type="javax.swing.JTextArea" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Koneksi" package="Corona" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="MySQLConfig" type="Connection" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="configDB" returnType="Connection" visibility="public" isStatic="true"/>
+        <Method name="buatAkun" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="nama"/>
+        </Method>
+        <Method name="buatSkor" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="nama"/>
+          <Argument type="double" name="skor"/>
+        </Method>
+        <Method name="ambil_id" returnType="int" visibility="public" isStatic="true">
+          <Argument type="String" name="nama"/>
+        </Method>
+        <Method name="ganti_nama" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="lama"/>
+          <Argument type="String" name="baru"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MainWindow" package="Corona" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Pemain" package="Corona" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="carImage" type="BufferedImage" visibility="private" isFinal="true"/>
+        <Field name="carXPosition" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="BufferedImage" name="image"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="moveLeft" returnType="void" visibility="public"/>
+        <Method name="moveRight" returnType="void" visibility="public"/>
+        <Method name="paintComponent" returnType="void" visibility="protected">
+          <Argument type="Graphics" name="g"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Rintangan" package="Corona" visibility="public" isAbstract="true" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="policeCarImage" type="BufferedImage" visibility="protected" isFinal="true"/>
+        <Field name="yPosition" type="int" visibility="protected"/>
+        <Field name="timer" type="Timer" visibility="protected" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="roadNumber"/>
+          <Argument type="int" name="velocityInMs"/>
+          <Argument type="BufferedImage" name="image"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setStartingPositionFromRoadNumber" returnType="void" visibility="public" isAbstract="true">
+          <Argument type="int" name="roadNumber"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public"/>
+        <Method name="stop" returnType="void" visibility="public"/>
+        <Method name="paintComponent" returnType="void" visibility="protected">
+          <Argument type="Graphics" name="g"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Road" package="Corona" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="treeTimer" type="Timer" visibility="private"/>
+        <Field name="stripesList" type="ArrayList&lt;RoadStripe&gt;" visibility="private" isFinal="true"/>
+        <Field name="treesList" type="ArrayList&lt;Tree&gt;" visibility="private" isFinal="true"/>
+        <Field name="stripesTimer" type="Timer" visibility="private"/>
+        <Field name="gameStarted" type="boolean" visibility="private"/>
+        <Field name="explosionImage" type="BufferedImage" visibility="private"/>
+        <Field name="explosionImagePart" type="BufferedImage" visibility="private"/>
+        <Field name="explosionImageCounter" type="int" visibility="private"/>
+        <Field name="explosionPosition" type="Point" visibility="public"/>
+        <Field name="treeImage" type="BufferedImage" visibility="private"/>
+        <Field name="stripeSpeed" type="int" visibility="private"/>
+        <Field name="treeSpeed" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="prepareStripesTimer" returnType="void" visibility="private"/>
+        <Method name="prepareTreeTimer" returnType="void" visibility="private"/>
+        <Method name="startTimers" returnType="void" visibility="public"/>
+        <Method name="addFirstTrees" returnType="void" visibility="private"/>
+        <Method name="startTimersInStripesList" returnType="void" visibility="private"/>
+        <Method name="startTimersInTreesList" returnType="void" visibility="private"/>
+        <Method name="setTimersSpeed" returnType="void" visibility="public">
+          <Argument type="int" name="speed"/>
+        </Method>
+        <Method name="prepareSpawnSpeed" returnType="int" visibility="private">
+          <Argument type="int" name="speed"/>
+        </Method>
+        <Method name="prepareStripes" returnType="void" visibility="public"/>
+        <Method name="prepareTrees" returnType="void" visibility="public"/>
+        <Method name="addNewStripes" returnType="void" visibility="private">
+          <Argument type="int" name="speed"/>
+        </Method>
+        <Method name="addNewTrees" returnType="void" visibility="private">
+          <Argument type="int" name="speed"/>
+        </Method>
+        <Method name="removeRedundantStripes" returnType="void" visibility="private"/>
+        <Method name="removeRedundantTrees" returnType="void" visibility="private"/>
+        <Method name="nextExplosion" returnType="void" visibility="public"/>
+        <Method name="stopAllTimers" returnType="void" visibility="public"/>
+        <Method name="paintComponent" returnType="void" visibility="protected">
+          <Argument type="Graphics" name="g"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RoadStripe" package="Corona" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="yPosition" type="int" visibility="private"/>
+        <Field name="timer" type="Timer" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+          <Argument type="int" name="speed"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="startTimer" returnType="void" visibility="public"/>
+        <Method name="stop" returnType="void" visibility="public"/>
+        <Method name="setSpeed" returnType="void" visibility="public">
+          <Argument type="int" name="speed"/>
+        </Method>
+        <Method name="paintComponent" returnType="void" visibility="protected">
+          <Argument type="Graphics" name="g"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Tree" package="Corona" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields>
+        <Field name="yPosition" type="int" visibility="private"/>
+        <Field name="timer" type="Timer" visibility="private" isFinal="true"/>
+        <Field name="treeImage" type="BufferedImage" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+          <Argument type="int" name="speed"/>
+          <Argument type="BufferedImage" name="image"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public"/>
+        <Method name="stop" returnType="void" visibility="public"/>
+        <Method name="setSpeed" returnType="void" visibility="public">
+          <Argument type="int" name="speed"/>
+        </Method>
+        <Method name="paintComponent" returnType="void" visibility="protected">
+          <Argument type="Graphics" name="g"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Tutorial" package="Corona" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Fields>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Virus" package="Corona" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="roadNumber"/>
+          <Argument type="int" name="velocityInMs"/>
+          <Argument type="BufferedImage" name="image"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setStartingPositionFromRoadNumber" returnType="void" visibility="public">
+          <Argument type="int" name="roadNumber"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Vitamin" package="Corona" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="roadNumber"/>
+          <Argument type="int" name="velocityInMs"/>
+          <Argument type="BufferedImage" name="image"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setStartingPositionFromRoadNumber" returnType="void" visibility="public">
+          <Argument type="int" name="roadNumber"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="vitamin" source="Corona.GamePanel" target="Corona.Vitamin" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Corona.Virus" target="Corona.Rintangan"/>
+    <IsRelation name="is" source="Corona.Vitamin" target="Corona.Rintangan"/>
+    <HasRelation name="road" source="Corona.GamePanel" target="Corona.Road" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="treesList" source="Corona.Road" target="Corona.Tree" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Tree&gt;"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Corona.GamePanel" target="Corona.Efek"/>
+    <HasRelation name="stripesList" source="Corona.Road" target="Corona.RoadStripe" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;RoadStripe&gt;"/>
+    <HasRelation name="pemain" source="Corona.GamePanel" target="Corona.Pemain" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vitaminList" source="Corona.GamePanel" target="Corona.Vitamin" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Vitamin&gt;"/>
+    <HasRelation name="virusList" source="Corona.GamePanel" target="Corona.Virus" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Virus&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
